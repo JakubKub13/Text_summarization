@@ -18,3 +18,9 @@ def wrap(x):
 print(wrap(doc.iloc[0]))
 
 summarizer = pipeline("summarization")
+
+summarizer(doc.iloc[0].split("\n", 1)[1])
+
+def print_summary(doc):
+  result = summarizer(doc.iloc[0].split("\n", 1)[1])
+  print(wrap(result[0]['summary_text']))
