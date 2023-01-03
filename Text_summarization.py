@@ -17,3 +17,4 @@ def wrap(x):
 
 print(wrap(doc.iloc[0]))
 
+summarizer = pipeline("summarization")
