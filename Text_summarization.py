@@ -24,3 +24,10 @@ summarizer(doc.iloc[0].split("\n", 1)[1])
 def print_summary(doc):
   result = summarizer(doc.iloc[0].split("\n", 1)[1])
   print(wrap(result[0]['summary_text']))
+
+print_summary(doc)
+
+doc = data_frame[data_frame.labels == 'entertainment']['text'].sample(random_state=123)
+print(wrap(doc.iloc[0]))
+
+print_summary(doc)
